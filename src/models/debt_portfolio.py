@@ -86,35 +86,89 @@ def normalize_security_type(value: str) -> str:
 
 
 def get_scalar_for_year(
-    value: ScalarPath,
+    value,
     year: int,
     name: str = "value",
 ) -> float:
     """
-    Accept either a constant scalar or a {year: value} path.
+    Accept:
+    - a constant scalar;
+    - a {year: value} mapping;
+    - a pandas Series indexed by year.
     """
+
+    # --------------------------------------------------------
+    # Constant scalar
+    # --------------------------------------------------------
+
     if isinstance(
         value,
-        (float, int, np.floating, np.integer),
+        (
+            float,
+            int,
+            np.floating,
+            np.integer,
+        ),
     ):
-        result = float(value)
-
-    elif isinstance(value, Mapping):
-        if year not in value:
-            raise KeyError(
-                f"No {name} supplied for simulation year {year}."
-            )
-
-        result = float(value[year])
-
-    else:
-        raise TypeError(
-            f"{name} must be a scalar or a year -> value mapping."
+        result = float(
+            value
         )
 
-    if not np.isfinite(result):
+    # --------------------------------------------------------
+    # Pandas Series
+    # --------------------------------------------------------
+
+    elif isinstance(
+        value,
+        pd.Series,
+    ):
+
+        if year not in value.index:
+            raise KeyError(
+                f"No {name} supplied "
+                f"for simulation year {year}."
+            )
+
+        result = float(
+            value.loc[year]
+        )
+
+    # --------------------------------------------------------
+    # Dictionary / Mapping
+    # --------------------------------------------------------
+
+    elif isinstance(
+        value,
+        Mapping,
+    ):
+
+        if year not in value:
+            raise KeyError(
+                f"No {name} supplied "
+                f"for simulation year {year}."
+            )
+
+        result = float(
+            value[year]
+        )
+
+    else:
+
+        raise TypeError(
+            f"{name} must be a scalar, "
+            "pandas Series, or year -> value mapping."
+        )
+
+    # --------------------------------------------------------
+    # Numerical validation
+    # --------------------------------------------------------
+
+    if not np.isfinite(
+        result
+    ):
         raise ValueError(
-            f"{name} for {year} is not finite: {result}"
+            f"{name} for {year} "
+            f"is not finite: {result}"
         )
 
     return result
