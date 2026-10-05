@@ -1,0 +1,3 @@
+scenario,median_terminal_debt_gap_pp,p90_terminal_debt_gap_pp,median_cumulative_incremental_AFT_cost_bn,p90_cumulative_incremental_AFT_cost_bn,median_terminal_10y_feedback_bp,p90_peak_10y_feedback_bp
+Half consolidation,23.49658139137251,25.90130048773663,249.99014185977154,319.963289127903,90.82659911468862,105.59188663527745
+No consolidation,47.85988823173467,52.81316828615501,538.5026795962924,684.139123428499,196.6970638509842,228.96098101932225
