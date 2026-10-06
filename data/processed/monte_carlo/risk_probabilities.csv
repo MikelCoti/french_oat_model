@@ -1,12 +1,12 @@
 metric,probability,probability_pct
-Debt/GDP > 130% in 2041,0.3299,32.99
-Debt/GDP > 150% in 2041,0.0184,1.8399999999999999
-Debt/GDP > 175% in 2041,0.0,0.0
-Debt/GDP above 2026 level in 2041,0.7019,70.19
-Debt rises >20 pp within any 5-year window,0.026,2.6
-Interest/GDP exceeds 4% at least once,0.4851,48.51
-Interest/GDP exceeds 5% at least once,0.1105,11.05
-30Y OAT exceeds 6% at least once,0.2059,20.59
-30Y OAT exceeds 7% at least once,0.0239,2.39
-30Y OAT > 6% in 2041,0.0283,2.83
-30Y OAT > 7% in 2041,0.0034,0.33999999999999997
+Debt/GDP > 130% in 2041,0.5007,50.07
+Debt/GDP > 150% in 2041,0.0663,6.63
+Debt/GDP > 175% in 2041,0.0005,0.05
+Debt/GDP above 2026 level in 2041,0.8255,82.55
+Debt rises >20 pp within any 5-year window,0.0681,6.81
+Interest/GDP exceeds 4% at least once,0.8066,80.66
+Interest/GDP exceeds 5% at least once,0.4591,45.910000000000004
+30Y OAT exceeds 6% at least once,0.707,70.7
+30Y OAT exceeds 7% at least once,0.2951,29.509999999999998
+30Y OAT > 6% in 2041,0.3773,37.730000000000004
+30Y OAT > 7% in 2041,0.1276,12.76

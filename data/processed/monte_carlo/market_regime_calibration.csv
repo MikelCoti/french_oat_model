@@ -1,0 +1,11 @@
+metric,value
+market_anchor_date,2026-10-05
+historical_bund_long_run,0.015097767663018222
+bund_forward_10y10y,0.041100000000000005
+bund_forward_15y10y,0.041499999999999995
+bund_svensson_beta0,0.0415209
+market_implied_bund_long_run,0.0413
+regime_weight,1.0
+selected_bund_long_run,0.0413
+selected_france_spread_long_run,0.005175960784781766
+observed_2026_oat_30y,0.0517
